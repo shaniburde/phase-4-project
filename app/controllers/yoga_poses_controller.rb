@@ -1,0 +1,2 @@
+class YogaPosesController < ApplicationController
+end
