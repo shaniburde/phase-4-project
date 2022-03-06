@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 export default function YogaItem({yogaPose}) {
-  const {title, image, category, description, favorited, video, comments} = yogaPose
+  const {title, image, category, description, favorited} = yogaPose
 
   const [liked, setLiked] = useState(false)
 
