@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import YogaList from './YogaList';
 
 export default function Maincontainer({yogaData}) {
+
+const [clicked, setClicked] = useState(false);
+
   return (
     <div>
-    <YogaList yogaData={yogaData}/>
+    {clicked ? 
+    <Video clicked={clicked} setClicked={setClicked}/> : <YogaList yogaData={yogaData}/>
+    }
     </div>
   )
 }
