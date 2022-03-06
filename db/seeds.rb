@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "👩👨 Seeding users..."
+
 user1 = User.create(username: 'Jen', password: 'apple')
 user2 = User.create(username: 'Shani', password: 'banana')
 user3 = User.create(username: 'Gehrig', password: 'banana')
@@ -16,7 +17,9 @@ user6 = User.create(username: 'Ilolo', password: 'banana')
 user7 = User.create(username: 'Vivian', password: 'banana')
 user8 = User.create(username: 'Rodney', password: 'banana')
 
+
 puts "🧘🤸 Seeding yoga poses..."
+
 yoga1 = YogaPose.create(title: "Downward-Facing Dog Pose", image: "https://media.self.com/photos/5b841151bfb49a655b4bf2ec/master/w_2580%2Cc_limit/downward-dog-beginner-yoga.jpg", category: "stress", description: "Start on your hands and knees, with your hands stacked under your shoulders and knees under your hips. Spread your hands wide and press your index finger and thumb into your mat. Lift your tailbone and press your butt up and back, drawing your hips toward the ceiling. Straighten your legs as best as you can and press your heels gently toward the floor. Your head should be between your arms, facing your knees, and your backs should be flat. Hold for 5 to 10 breaths.", favorited: "false", video: "https://www.youtube.com/watch?v=j97SSGsnCAQ")
 
 yoga2 = YogaPose.create(title: "Mountain Pose", image: "https://media.self.com/photos/5b7c4e702efd865291548a83/master/w_2580%2Cc_limit/mountain-pose-beginner-yoga.jpg", category: "concentration", description: "Stand with your toes together and heels slightly apart.
@@ -26,9 +29,9 @@ yoga3 = YogaPose.create(title: "Crescent Lunge", image: "https://media.self.com/
 
 yoga4 = YogaPose.create(title: "Warrior II Pose", image: "https://media.self.com/photos/5b8411524c1c2e249b195c1b/master/w_2580%2Cc_limit/warrior-2-beginner-yoga.jpg", category: "stress", description: "Take a big step forward with your left foot to start in a staggered stance, with your feet almost mat-length apart. Extend your arms so that they are parallel to the floor. Bend your left knee so that it's at or near a 90-degree angle, your thigh parallel to the floor, while keeping the right leg straight. Point your left toes forward and turn your right foot out to the right so that it's perpendicular to your left foot. Your left heel should be in line with the arch of your right foot. At the same time, twist your torso to the right so that your left hip is facing toward the front of the room and your right hip is facing toward the back. Your left arm and your head should both be pointing forward and your right arm should be pointing back. Hold for 1 to 5 breaths.", favorited: "false", video: "https://www.youtube.com/watch?v=4Ejz7IgODlU")
 
-yoga5 = YogaPose.create(title: , image: , category: , description: , favorited: "false", video: )
+yoga5 = YogaPose.create(title: "Triangle Pose", image: "https://media.self.com/photos/5b7c4e71ecbb7f4c41c77335/master/w_2580%2Cc_limit/triangle-pose-beginner-yoga.jpg", category: "concentration", description: "Start in Warrior II. Straighten your front leg. Then, reach forward with your left hand toward the ground. Tilt your torso forward and rotate it open to the right side. Rotate your arms to 6 and 12 o’clock. Rest your left hand on your shin, or the floor if you can, and extend your top arm fingers toward the ceiling. Hold for 5 to 10 breaths, then switch sides.", favorited: "false", video: "https://www.youtube.com/watch?v=upFYlxZHif0")
 
-yoga6 = YogaPose.create(title: , image: , category: , description: , favorited: "false", video: )
+yoga6 = YogaPose.create(title: "Plank Pose", image: "https://media.self.com/photos/5b85ad8e2bc4b7636663a613/master/w_2580%2Cc_limit/high-plank-beginner-yoga.jpg", category: "stress", description: "Start on all fours, with your knees under your hips and your hands flat on the floor directly underneath your shoulders. Lift your knees off the floor and extend your legs out behind you. You should now be on your toes and your hands, with your body forming one long line. Keep your palms flat on the floor, hands shoulder-width apart, shoulders stacked directly above your wrists, and core engaged. Keep your neck and spine in a neutral position by looking down at the top of your mat. Hold this position for 3-5 breaths.", favorited: "false", video: "https://www.youtube.com/watch?v=6qg3r4zZE_k")
 
 yoga7 = YogaPose.create(title: , image: , category: , description: , favorited: "false", video: )
 
@@ -40,6 +43,7 @@ yoga10 = YogaPose.create(title: , image: , category: , description: , favorited:
 
 
 puts "✍🏻🗒️ Seeding comments..."
+
 comment1 = Comment.create(description: "This pose really helped me with my anxiety", user_id: 1, yoga_pose_id: 1)
 
 comment2 = Comment.create(description: "I felt so relaxed and aware of my body while doing this! Thank you!", user_id: 1, yoga_pose_id: 2)
