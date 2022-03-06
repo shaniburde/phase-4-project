@@ -38,22 +38,23 @@ yoga9 = YogaPose.create(title: , image: , category: , description: , favorited: 
 
 yoga10 = YogaPose.create(title: , image: , category: , description: , favorited: "false", video: )
 
+
 puts "✍🏻🗒️ Seeding comments..."
 comment1 = Comment.create(description: "This pose really helped me with my anxiety", user_id: 1, yoga_pose_id: 1)
-comment2 = Comment.create(description: , user_id: 1, yoga_pose_id: 2)
-comment3 = Comment.create(description: , user_id: 2, yoga_pose_id: 3)
-comment4 = Comment.create(description: , user_id: 2, yoga_pose_id: 4)
-comment5 = Comment.create(description: , user_id: 3, yoga_pose_id: 5)
-comment6 = Comment.create(description: , user_id: 3, yoga_pose_id: 6)
-comment7 = Comment.create(description: , user_id: 4, yoga_pose_id: 7)
-comment8 = Comment.create(description: , user_id: 4, yoga_pose_id: 8)
-comment9 = Comment.create(description: , user_id: 5, yoga_pose_id: 9)
-comment10 = Comment.create(description: , user_id: 5, yoga_pose_id: 10)
-comment11 = Comment.create(description: , user_id: 6, yoga_pose_id: 1)
-comment12 = Comment.create(description: , user_id: 6, yoga_pose_id: 2)
-comment13 = Comment.create(description: , user_id: 7, yoga_pose_id: 3)
-comment14 = Comment.create(description: , user_id: 7, yoga_pose_id: 4)
-comment15 = Comment.create(description: , user_id: 8, yoga_pose_id: 5)
-comment16 = Comment.create(description: , user_id: 8, yoga_pose_id: 6)
+comment2 = Comment.create(description: "I felt so relaxed and aware of my body while doing this! Thank you!", user_id: 1, yoga_pose_id: 2)
+comment3 = Comment.create(description: "Loved this. Thank you 😊❤️", user_id: 2, yoga_pose_id: 3)
+comment4 = Comment.create(description: "I love this pose! It makes me feel really strong", user_id: 2, yoga_pose_id: 4)
+comment5 = Comment.create(description: "I've never connected to this pose like this! I felt the energy building just standing there breathing. I was smiling like a loon and my eyes watered a little...haha amazing", user_id: 3, yoga_pose_id: 5)
+comment6 = Comment.create(description: "This is also one of my favorite poses. It has really made an impact in my life and I come to this pose in different situations, like when I'm feeling anxious.", user_id: 3, yoga_pose_id: 6)
+comment7 = Comment.create(description: "I just started to practice and I already can feel the difference. I loved the video!!", user_id: 4, yoga_pose_id: 7)
+comment8 = Comment.create(description: "Watched the other videos. This is the first one I actually tried to do. Kinda new to all this. Thanks for the entertaining and well instructed videos. Cheers", user_id: 4, yoga_pose_id: 8)
+comment9 = Comment.create(description: "YAAAAASSSSS...great video...very helpfulllll", user_id: 5, yoga_pose_id: 9)
+comment10 = Comment.create(description: "Just did this during my lunch break at work. Thanks!", user_id: 5, yoga_pose_id: 10)
+comment11 = Comment.create(description: "I thought yoga would be something much more complicated, but it isn't. Like everything else it just needs practice.", user_id: 6, yoga_pose_id: 1)
+comment12 = Comment.create(description: "started with sciatica pain and it eased by the time the video was done", user_id: 6, yoga_pose_id: 2)
+comment13 = Comment.create(description: "After doing this pose i just realised that i distribute most of my weight to the medial side of my feet, therefore i was struggling to use all four corners of my foot. Hope to get better with practice!", user_id: 7, yoga_pose_id: 3)
+comment14 = Comment.create(description: "Thank you ❤️😊 🙏", user_id: 7, yoga_pose_id: 4)
+comment15 = Comment.create(description: "THIS POSE WAS REALLY GOOD", user_id: 8, yoga_pose_id: 5)
+comment16 = Comment.create(description: "I am so grateful for this yoga pose because it makes me feel confident, like I can do anything. So empowering!", user_id: 8, yoga_pose_id: 6)
 
 puts "✅ Done seeding!"
