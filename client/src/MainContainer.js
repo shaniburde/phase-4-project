@@ -9,14 +9,14 @@ const [clicked, setClicked] = useState(false);
   return (
     <div>
     {clicked ? 
-    <Video 
+    (<Video 
       yogaData={yogaData}
       clicked={clicked} 
-      setClicked={setClicked}/> : 
-    <YogaList 
+      setClicked={setClicked}/>) : 
+    (<YogaList 
       yogaData={yogaData} 
       clicked={clicked} 
-      setClicked={setClicked}/>
+      setClicked={setClicked}/>)
     }
     </div>
   )
