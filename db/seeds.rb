@@ -37,9 +37,10 @@ yoga7 = YogaPose.create(title: "Low Plank", image: "https://media.self.com/photo
 
 yoga8 = YogaPose.create(title: "Upward-Facing Dog Pose", image: "https://media.self.com/photos/5b7c4e6eecbb7f4c41c77331/master/w_2580%2Cc_limit/upward-facing-dog-beginner-yoga.jpg", category: "stress", description: "From Low Plank/Chaturanga, drop your hips down to the floor and flip your toes over so the tops of your feet touch the floor. Tighten your core and straighten your arms to push your chest up. Pull your shoulders back, squeeze your shoulder blades, and tilt your head toward the ceiling, to open up your chest.", favorited: "false", video: "https://www.youtube.com/watch?v=pVmOOluGAv8")
 
-yoga9 = YogaPose.create(title: , image: , category: , description: , favorited: "false", video: )
+yoga9 = YogaPose.create(title: "Tree Pose", image: "https://media.self.com/photos/5b7c4e6f2efd865291548a81/master/w_2580%2Cc_limit/tree-pose-beginner-yoga.jpg", category: "concentration", description: "Start in mountain pose with your toes together and heels slightly apart.
+Bring your right foot to the inner thigh of your left leg. Squeeze your foot and inner thigh together. The knee of your right leg should be turned out and your right thigh facing down toward the ground at a 45-degree angle. Once you’ve found your balance, lift your hands to prayer position in front of your chest, or up overhead if that feels better for you. Keep your gaze focused on a fixed point in front of you to help stay balanced. Hold for 5 to 10 breaths, then switch sides.", favorited: "false", video: "https://www.youtube.com/watch?v=yVE4XXFFO70")
 
-yoga10 = YogaPose.create(title: , image: , category: , description: , favorited: "false", video: )
+yoga10 = YogaPose.create(title: "Dancer Pose", image: "https://media.self.com/photos/5b7c4e70ecbb7f4c41c77333/master/w_2580%2Cc_limit/dancers-pose-beginner-yoga.jpg", category: "concentration", description: "Stand tall with your feet together. Bend your left knee and bring your left foot toward your glutes. Grab onto the inner arch of your left foot with your left hand and slowly lift your foot toward the ceiling. At the same time, reach your right arm forward and up toward the ceiling. Actively press down into the floor with your entire right foot as you start to open your chest and pull your lifted leg up. Keep your chest lifted. Hold on one side for 5 to 10 breaths, and then switch sides.", favorited: "false", video: "https://www.youtube.com/watch?v=TXNgRNsqcPo")
 
 
 puts "✍🏻🗒️ Seeding comments..."
