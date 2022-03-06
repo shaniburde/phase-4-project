@@ -35,7 +35,7 @@ yoga6 = YogaPose.create(title: "High Plank", image: "https://media.self.com/phot
 
 yoga7 = YogaPose.create(title: "Low Plank", image: "https://media.self.com/photos/5b85ad8c0eed546bd4c7024a/master/w_2580%2Cc_limit/low-plank-beginner-yoga.jpg", category: "stress", description: "Start in Plank Pose with your palms flat on the floor, hands shoulder-width apart, shoulders stacked directly above your wrists, legs extended, and core engaged. Slowly lower down to a Low Plank by bending your elbows, keeping them tucked in close to the side of your body, until they form 90-degree angles. Hold for 1 breath.", favorited: "false", video: "https://www.youtube.com/watch?v=3vzTYq4BX68")
 
-yoga8 = YogaPose.create(title: , image: , category: , description: , favorited: "false", video: )
+yoga8 = YogaPose.create(title: "Upward-Facing Dog Pose", image: "https://media.self.com/photos/5b7c4e6eecbb7f4c41c77331/master/w_2580%2Cc_limit/upward-facing-dog-beginner-yoga.jpg", category: "stress", description: "From Low Plank/Chaturanga, drop your hips down to the floor and flip your toes over so the tops of your feet touch the floor. Tighten your core and straighten your arms to push your chest up. Pull your shoulders back, squeeze your shoulder blades, and tilt your head toward the ceiling, to open up your chest.", favorited: "false", video: "https://www.youtube.com/watch?v=pVmOOluGAv8")
 
 yoga9 = YogaPose.create(title: , image: , category: , description: , favorited: "false", video: )
 
