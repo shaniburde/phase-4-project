@@ -6,13 +6,16 @@ export default function Maincontainer({yogaData}) {
 
 const [clicked, setClicked] = useState(false);
 
+
+
   return (
     <div>
     {clicked ? 
     (<Video 
       yogaData={yogaData}
       clicked={clicked} 
-      setClicked={setClicked}/>) : 
+      setClicked={setClicked}
+      />) : 
     (<YogaList 
       yogaData={yogaData} 
       clicked={clicked} 

@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
 
-export default function YogaItem({yogaPose, clicked, setClicked}) {
-  const {id, title, image, category, description, favorited} = yogaPose
+export default function YogaItem({id, title, image, category, description, favorited, clicked, setClicked}) {
+  
 
   const [liked, setLiked] = useState(false)
 
@@ -12,13 +12,20 @@ export default function YogaItem({yogaPose, clicked, setClicked}) {
     setClicked(!clicked)
   }
   
+  // function videoId(){
+  // const yogaVideoId = id
+  // }
+
   return (
-    <div onClick={handleButtonClick}>
+    <>
+    <div className="yoga-card" onClick={handleButtonClick}>
       <h2>{title}</h2>
-      <img src={image}/>
+      <img src={image} className="yogaimage"/>
       <h4>{category}</h4>
       <button onClick={handleClick}>{liked ? '❤' : '♡'}</button>
       <p>{description}</p>
     </div>
-  )
+
+</>
+)
 }

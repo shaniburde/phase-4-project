@@ -9,7 +9,7 @@ function App() {
   const [yogaData, setYogaData] = useState([])
 
   useEffect(() => {
-    fetch(`http://localhost:4000/yoga_poses`)
+    fetch("http://localhost:4000/yoga_poses")
       .then((r) => r.json())
       .then((pose) => {
         setYogaData(pose);
