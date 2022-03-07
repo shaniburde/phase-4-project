@@ -16,14 +16,14 @@ import PropTypes from "prop-types";
 //   </div>
 // );
 
-export default function YoutubeEmbed({ yogaData }) {
+export default function YoutubeEmbed({ yogaVideo }) {
 
     return(
-        <div className="video-responsive">
+  <div className="video-responsive">
     <iframe
       width="853"
       height="480"
-      src={}
+      src={yogaVideo}
       frameBorder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
@@ -33,8 +33,7 @@ export default function YoutubeEmbed({ yogaData }) {
     )
 };
 
-YoutubeEmbed.propTypes = {
-  embedId: PropTypes.string.isRequired
-};
+// YoutubeEmbed.propTypes = {
+//   embedId: PropTypes.string.isRequired
+// };
 
-export default YoutubeEmbed;

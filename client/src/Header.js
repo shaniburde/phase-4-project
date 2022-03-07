@@ -3,8 +3,8 @@ import Navbar from './Navbar';
 
 export default function Header() {
   return (
-    <div>
-      This is the Header
+    <div className="header-background">
+      <h1 className="header">Calmer</h1>
       <Navbar />
     </div>
   )

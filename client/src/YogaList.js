@@ -1,7 +1,7 @@
 import React from 'react';
 import YogaItem from './YogaItem';
 
-export default function YogaList({ yogaData, clicked, setClicked }) {
+export default function YogaList({ yogaData, clicked, setClicked, findVideo }) {
 
   const yogaItems = yogaData.map((yogaPose) => 
   <YogaItem 
@@ -14,6 +14,7 @@ export default function YogaList({ yogaData, clicked, setClicked }) {
     category={yogaPose.category} 
     description={yogaPose.description} 
     favorited={yogaPose.favorited}
+    findVideo={findVideo}
   />)
 
   

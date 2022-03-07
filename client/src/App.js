@@ -17,6 +17,8 @@ function App() {
       });
   }, []);
 
+  console.log(yogaData)
+
   return (
     <>
     <div className="App">

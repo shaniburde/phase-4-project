@@ -2,38 +2,43 @@ import React, { useState } from 'react';
 import Video from './Video';
 import YogaList from './YogaList';
 
-export default function Maincontainer({yogaData}) {
-
-  const {video} = yogaData
+export default function MainContainer({yogaData}) {
 
   const [clicked, setClicked] = useState(false);
   const [yogaVideo, setYogaVideo] = useState("")
 
-  function findVideo(clickedYogaId){
-    const yogaYoutubeVideo = video.filter((v) => {
-      if (v.id === clickedYogaId.id) {
-        return yVideo
-      } else {
-        return null
-      }
-    });
-    setYogaVideo(yVideo)
-  }
+  
 
+  // function findVideo(clickedYogaCard){
+  //   const yogaYoutubeVideo = yogaData.filter((video) => {
+  //     if (video.id === clickedYogaCard) {
+  //       return video
+  //     }
+  //   })
+  //   setYogaVideo(yogaYoutubeVideo.video)
+  // };
+
+  // const video = yogaData.map((data) => data.video)
+  // console.log(video)
+  console.log(yogaData)
 
   return (
     <div>
-    {clicked ? 
-    (<Video 
-      yogaData={yogaData}
-      clicked={clicked} 
-      setClicked={setClicked}
-      />) : 
-    (<YogaList 
-      yogaData={yogaData} 
-      clicked={clicked} 
-      setClicked={setClicked}/>)
-    }
+      {/* {clicked ?  */}
+      {/* // (<Video  */}
+      {/* //   yogaData={yogaData}
+      //   clicked={clicked} 
+      //   setClicked={setClicked}
+      //   yogaVideo={yogaVideo}
+      //   />) :  */}
+      
+      <YogaList 
+        yogaData={yogaData} 
+        clicked={clicked} 
+        setClicked={setClicked}
+        // findVideo={findVideo}
+        />
+    
     </div>
   )
 }
