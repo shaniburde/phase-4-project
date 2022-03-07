@@ -3,15 +3,6 @@
 }
 
 .yoga-container{
-  /* display: grid;
-  grid: 350px / auto auto auto;
-  padding: 5%;
-  grid-template-columns: 200px 50px 200px;
-  grid-template-rows: auto auto auto; 
-  column-gap: 10px;
-  row-gap: 15px;
-  place-self: center;
-  justify-items: center; */
   display: grid;
   margin: 0 auto;
   max-height: 125rem;
@@ -24,16 +15,9 @@
 }
 
 .yoga-item{
-    /* display: inline-block; */
-    /* grid-column: 4 / 4; */
-    /* grid-row: 4; */
-    /* flex-direction: column; */
-    /* align-self: stretch; */
-    /* place-self: center; */
-    /* justify-items: center; */
     display: flex;
     flex-direction: column;
-    background-color: #98BEA2;  
+    background-color: #caf0f8;  
     align-content: center;
     height: 450px;
     width: 400px;
@@ -43,6 +27,9 @@
     text-align: center;
     padding: 5%;
     border-radius: 25px;
-    box-shadow: 5px 5px #183E4E;
+    box-shadow: 5px 5px #48cae4;
     transition: .7s;
+}
+.yoga-item:hover{
+  box-shadow: 5px 5px #03045e;
 }
