@@ -78,6 +78,23 @@
   box-shadow: 5px 5px #03045e;
 }
 
+.next-button{
+  padding: 10px;
+  justify-content: center;
+  align-self: center;
+  float: right;
+  margin-left: 50%;
+  margin-right: 50%;
+  margin-top: 3%;
+  margin-bottom: 5%;
+  border: none;
+  background-color: #03045e;
+  color: white;
+  font-weight: bold;
+  border-radius: 15px;
+  font-size: 30px;
+}
+
 
 /* youtube videos */
 

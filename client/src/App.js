@@ -12,12 +12,9 @@ function App() {
   useEffect(() => {
     fetch("http://localhost:4000/yoga_poses")
       .then((r) => r.json())
-      .then((pose) => {
-        setYogaData(pose);
-      });
+      .then((pose) => {setYogaData(pose)});
   }, []);
 
-  console.log(yogaData)
 
   return (
     <>
@@ -25,7 +22,7 @@ function App() {
       <Header />
       <Routes>
           <Route exact path="/login" element={<Login />}/>
-          <Route exact path="/yoga-poses" element={<MainContainer yogaData={yogaData}/>}/>
+          <Route exact path="/yoga-poses" element={<MainContainer yogaData={yogaData} />}/>
         </Routes>
     </div>
     </>

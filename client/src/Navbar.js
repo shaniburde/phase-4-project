@@ -6,7 +6,6 @@ export default function Navbar() {
     <div className="header-background">
         <Link exact to="/login" className="nav-button"> Login </Link>
         <Link exact to="/yoga-poses" className="nav-button"> Home </Link>
-        
     </div>
   )
 }
