@@ -18,8 +18,8 @@ export default function YogaList({ yogaData, clicked, setClicked }) {
 
   
   return (
-    <div className="yoga-container">
-     <div>{yogaItems}</div>
+    <div>
+     <div className="yoga-container">{yogaItems}</div>
     </div>
   )
 }
