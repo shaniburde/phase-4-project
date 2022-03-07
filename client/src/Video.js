@@ -1,4 +1,7 @@
 import React from 'react';
+// import "./styles.css";
+import YoutubeEmbed from "./YoutubeEmbed";
+
 
 export default function Video({yogaData, clicked, setClicked}) {
 
@@ -36,10 +39,11 @@ export default function Video({yogaData, clicked, setClicked}) {
   return (
     
     <div>
+      <YoutubeEmbed yogaData={yogaData} />
     {/* {yogaVideo} */}
 
     
-        {/* <Player
+    {/* <Player
       playsInline
       poster="/assets/poster.png"
       src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"

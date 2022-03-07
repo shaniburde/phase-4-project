@@ -30,20 +30,21 @@ export default function YogaItem({id, title, image, category, description, favor
     //     <h2>{title}</h2>
     //     <img src={image} className="yogaimage"/>
     //     <h4>{category}</h4>
-    //     <button onClick={handleClick}>{liked ? '❤' : '♡'}</button>
+    //     
     //     <p>{description}</p>
     //   </div> 
     // </div>
 
 
   // return (
-    <Card sx={{ maxWidth: 345 }} className="yoga-item">
+    <Card sx={{ maxWidth: 345 }} className="yoga-item" onClick={handleButtonClick}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="140"
           image={image}
           alt="yoga pose image"
+          className="yogaimage"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -55,6 +56,7 @@ export default function YogaItem({id, title, image, category, description, favor
           <Typography variant="body2" color="text.secondary">
             {description}
           </Typography>
+          <button onClick={handleClick}>{liked ? '❤' : '♡'}</button>
         </CardContent>
       </CardActionArea>
     </Card>

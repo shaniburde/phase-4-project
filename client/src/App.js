@@ -22,10 +22,9 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
+          <Route exact path="/login" element={<Login />}/>
           <Route exact path="/yoga-poses" element={<MainContainer yogaData={yogaData}/>}/>
         </Routes>
-      <Login />
-      {/* <MainContainer yogaData={yogaData}/> */}
     </div>
     </>
   );
