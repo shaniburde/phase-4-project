@@ -37,27 +37,28 @@ export default function YogaItem({id, title, image, category, description, favor
 
 
   // return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345 }} className="yoga-item">
       <CardActionArea>
         <CardMedia
           component="img"
           height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
-          alt="green iguana"
+          image={image}
+          alt="yoga pose image"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            {description}
           </Typography>
         </CardContent>
       </CardActionArea>
     </Card>
   );
 
+
+  
 // </>
   
 }
