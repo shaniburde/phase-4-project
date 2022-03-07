@@ -3,24 +3,45 @@
   font-family: 'Cookie', cursive;
   color: #ffffff;
   text-shadow: 2px 2px #03045e;
-  font-size: 80px;
+  font-size: 100px;
   text-align: center;
-  padding: 15px;
+  padding-top: 25px;
+  margin: 0 auto;
 }
 .header-background{
+  height: 150px;
   background-color: #48cae4;
+  margin: 0 auto;
 }
 
 
 /* nav bar */
 .nav-button{
   text-align: center;
-  
+  background-color: #caf0f8;
+  font-weight: bold;
+  border-radius: 15px;
+  color: #ffffff;
+  box-shadow: 2px 2px #03045e;
+  text-shadow: 2px 2px #03045e;
+  font-size: 30px;
+  float: right;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 15px;
+  padding-bottom: 0 auto;
+  text-decoration: none;
+}
+
+/* yoga list */
+
+.yoga-list{
+  margin-top: 170px;
 }
 
 /* yoga cards */
 .yogaimage {
-    width: 35%;
+    width: 70%;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -35,7 +56,6 @@
   padding-left: 2%;
   padding-bottom: 2%;
   min-width: 100rem;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .yoga-item{
@@ -43,8 +63,8 @@
     flex-direction: column;
     background-color: #caf0f8;  
     align-content: center;
-    height: 450px;
-    width: 400px;
+    height: 85%;
+    width: 60%;
     justify-content: center;
     align-items: center;
     margin: 0 auto;

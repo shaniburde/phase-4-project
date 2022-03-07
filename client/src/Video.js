@@ -19,3 +19,6 @@
 //     </div>
 //   )
 // }
+
+
+// NOTE: add description of yoga pose here!

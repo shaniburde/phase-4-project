@@ -12,14 +12,14 @@ export default function YogaList({ yogaData, clicked, setClicked, findVideo }) {
     title={yogaPose.title} 
     image={yogaPose.image}
     category={yogaPose.category} 
-    description={yogaPose.description} 
+    // description={yogaPose.description} 
     favorited={yogaPose.favorited}
     findVideo={findVideo}
   />)
 
   
   return (
-    <div>
+    <div className="yoga-list">
      <div className="yoga-container">{yogaItems}</div>
     </div>
   )
