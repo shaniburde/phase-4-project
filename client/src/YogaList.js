@@ -14,11 +14,12 @@ export default function YogaList({ yogaData, clicked, setClicked }) {
     category={yogaPose.category} 
     description={yogaPose.description} 
     favorited={yogaPose.favorited}
-    className="yoga-container"
   />)
 
   
   return (
-    <div>{yogaItems}</div>
+    <div className="yoga-container">
+     <div>{yogaItems}</div>
+    </div>
   )
 }
