@@ -47,7 +47,10 @@ export default function YogaItem({id, title, image, category, description, favor
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {title}
+            {title} 
+          </Typography>
+          <Typography gutterBottom variant="h6" component="div">
+            ({category})
           </Typography>
           <Typography variant="body2" color="text.secondary">
             {description}
