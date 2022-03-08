@@ -9,8 +9,8 @@ function Login({ onLogin }) {
   const [showLogin, setShowLogin] = useState(true);
   
   return (
-    <div>
-      <h1>Calmer</h1>
+    <Wrapper>
+      <Logo>Calmer</Logo>
       {showLogin ? (
         <>
           <LoginForm onLogin={onLogin} />
@@ -33,7 +33,7 @@ function Login({ onLogin }) {
           </p>
         </>
       )}
-    </div>
+    </Wrapper>
   );
 }
 

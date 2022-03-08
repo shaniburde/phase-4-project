@@ -2,7 +2,7 @@ import './App.css';
 import React, {useEffect, useState} from 'react';
 import { Route, Routes } from "react-router-dom"; 
 import Header from './Header';
-import Login from './LoginForm';
+import Login from './Login';
 import MainContainer from './MainContainer';
 
 function App() {
@@ -31,16 +31,16 @@ function App() {
   function handleLogout() {
     setUser(null);
   }
-  
+   console.log(yogaData)
 
   if (!user) return <Login onLogin={setUser} />;
 
   return (
     <>
     <div className="App">
-      <Header user={user} onLogout={handleLogout} />
+      <Header user={user} setUser={setUser} onLogout={handleLogout} />
       <Routes>
-          <Route exact path="/login" element={<Login onLogin={handleLogin} />}/>
+          {/* <Route exact path="/login" element={<Login onLogin={handleLogin} />}/> */}
           <Route exact path="/yoga-poses" element={<MainContainer yogaData={yogaData} />}/>
         </Routes>
     </div>
