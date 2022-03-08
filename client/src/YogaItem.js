@@ -30,7 +30,7 @@ export default function YogaItem({id, title, image, category, description, favor
     <div className="yoga-item">
       <div onClick={handleButtonClick}>
         <h2>{title}</h2>
-        <img src={image} className="yogaimage"/>
+        <img src={image} className="yogaimage" alt="yoga pose"/>
         <h4>{category}</h4>
         <p>{description}</p>
       </div> 

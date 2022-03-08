@@ -11,7 +11,7 @@ function App() {
   const [user, setUser] = useState(null);
   
     useEffect(() => {
-      fetch("/me").then((response) => {
+      fetch("http://localhost:4000/me").then((response) => {
         if (response.ok) {
           response.json().then((user) => setUser(user));
         }
@@ -31,6 +31,7 @@ function App() {
   function handleLogout() {
     setUser(null);
   }
+  
 
   if (!user) return <Login onLogin={setUser} />;
 
