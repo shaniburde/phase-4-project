@@ -12,12 +12,12 @@ class CommentsController < ApplicationController
 
     def update 
         comment = find_comment
-        comment.update!(comment_params)
+        @current_user.comments.update!(comment_params)
         render json: comment, status: :ok
     end
 
     def create 
-        comment = Comment.create!(:comment_params)
+        comment = @current_user.comments.create!(comment_params)
         render json: comment, status: :created
     end
 

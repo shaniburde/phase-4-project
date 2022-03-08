@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   resources :comments
   resources :yoga_poses, only: [:index, :show]
   resources :users, only: [:index, :show, :create, :destroy]
+  post "/signup", to: "users#create"
   post "/login", to: "sessions#login"
   delete "/logout", to: "sessions#logout"
   get "/me", to: "users#show"
-  get '/authorized_user', to: 'users#show'
   
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!

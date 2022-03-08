@@ -1,29 +1,59 @@
-import React, { useState } from 'react';
+import { useState } from "react";
+import styled from "styled-components";
+import LoginForm from "./LoginForm";
+import SignUpForm from "./SignUpForm";
+import { Button } from "./styles";
 
-export default function Login({ onLogin }) {
-  const [username, setUsername] = useState("");
+const Logo = styled.h1`
+  font-family: "Permanent Marker", cursive;
+  font-size: 3rem;
+  color: deeppink;
+  margin: 8px 0 16px;
+`;
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    fetch("/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ username }),
-    })
-      .then((r) => r.json())
-      .then((user) => onLogin(user));
-  }
+const Wrapper = styled.section`
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 16px;
+`;
+
+const Divider = styled.hr`
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin: 16px 0;
+`;
+
+function Login({ onLogin }) {
+  const [showLogin, setShowLogin] = useState(true);
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <button type="submit">Login</button>
-    </form>
+    <Wrapper>
+      <Logo>Calmer</Logo>
+      {showLogin ? (
+        <>
+          <LoginForm onLogin={onLogin} />
+          <Divider />
+          <p>
+            Don't have an account? &nbsp;
+            <Button color="secondary" onClick={() => setShowLogin(false)}>
+              Sign Up
+            </Button>
+          </p>
+        </>
+      ) : (
+        <>
+          <SignUpForm onLogin={onLogin} />
+          <Divider />
+          <p>
+            Already have an account? &nbsp;
+            <Button color="secondary" onClick={() => setShowLogin(true)}>
+              Log In
+            </Button>
+          </p>
+        </>
+      )}
+    </Wrapper>
   );
 }
+
+export default Login;

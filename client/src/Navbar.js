@@ -1,26 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styled from "styled-components";
 
-export default function Navbar({ user, onLogout }) {
+export default function Navbar({ user, setUser }) {
 
-    function handleLogout() {
-        fetch("/logout", {
-          method: "DELETE",
-        }).then(() => onLogout());
+  function handleLogoutClick() {
+    fetch("/logout", { method: "DELETE" }).then((r) => {
+      if (r.ok) {
+        setUser(null);
       }
+    });
+  }
 
   return (
       <>
          <div className="header-background">
-        {user ? (
             <div>
             <p>Welcome, {user.username}!</p>
-            <button onClick={handleLogout}>Logout</button>
+            <button onClick={handleLogoutClick} className="nav-button">Logout</button>
             </div>
-            ) : (
-            <Link exact to="/login" className="nav-button">Login</Link>
-            )}
-        <Link exact to="/yoga-poses" className="nav-button"> Home </Link>
+            {/* <Link exact to="/login" className="nav-button">Login</Link> */}
+            <Link exact to="/yoga-poses" className="nav-button"> Home </Link>
         </div>
     </>
   )

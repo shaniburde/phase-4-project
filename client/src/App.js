@@ -2,7 +2,7 @@ import './App.css';
 import React, {useEffect, useState} from 'react';
 import { Route, Routes } from "react-router-dom"; 
 import Header from './Header';
-import Login from './Login';
+import Login from './LoginForm';
 import MainContainer from './MainContainer';
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
     setUser(null);
   }
 
-  console.log(yogaData)
+  if (!user) return <Login onLogin={setUser} />;
 
   return (
     <>
