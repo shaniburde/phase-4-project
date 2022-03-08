@@ -8,6 +8,15 @@ import MainContainer from './MainContainer';
 function App() {
 
   const [yogaData, setYogaData] = useState([])
+  const [user, setUser] = useState(null);
+  
+    useEffect(() => {
+      fetch("/me").then((response) => {
+        if (response.ok) {
+          response.json().then((user) => setUser(user));
+        }
+      });
+    }, []);
 
   useEffect(() => {
     fetch("http://localhost:4000/yoga_poses")
@@ -15,13 +24,20 @@ function App() {
       .then((pose) => {setYogaData(pose)});
   }, []);
 
+  function handleLogin(user) {
+    setUser(user);
+  }
+
+  function handleLogout() {
+    setUser(null);
+  }
 
   return (
     <>
     <div className="App">
-      <Header />
+      <Header user={user} onLogout={handleLogout} />
       <Routes>
-          <Route exact path="/login" element={<Login />}/>
+          <Route exact path="/login" element={<Login onLogin={handleLogin} />}/>
           <Route exact path="/yoga-poses" element={<MainContainer yogaData={yogaData} />}/>
         </Routes>
     </div>
