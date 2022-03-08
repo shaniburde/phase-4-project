@@ -32,6 +32,8 @@ function App() {
     setUser(null);
   }
 
+  console.log(yogaData)
+
   return (
     <>
     <div className="App">
