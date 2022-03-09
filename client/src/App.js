@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import Header from './Header';
 import Login from './Login';
 import MainContainer from './MainContainer';
+import Video from './Video';
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
       <Header user={user} setUser={setUser} onLogout={handleLogout} />
       <Routes>
           <Route exact path="/yoga-poses" element={<MainContainer yogaData={yogaData}/>}/>
+          <Route exact path="/videos" element={<Video yogaData={yogaData}/>}/>
         </Routes>
     </div>
     </>

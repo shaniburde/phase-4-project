@@ -1,24 +1,32 @@
 // import React from 'react';
 // import YoutubeEmbed from "./YoutubeEmbed";
 
+// export default function Video({ yogaData }) {
 
-// export default function Video({ yogaVideo, yogaData }) {
-
-//     const {video, comments} = yogaData
-
-//     const youtubeVideos = video.map((yogaVideo) =>
-//     <YoutubeEmbed 
-//         yogaVideo={yogaVideo.video} 
-//       /> 
+//     const youtubeVideo = yogaData.map((v) =>
+//         <YoutubeEmbed 
+//         key={v.id}
+//         video={v.video} />
 //     )
 
+//     console.log(youtubeVideo)
 //   return (
     
 //     <div>
-//       {youtubeVideos}
+//       {youtubeVideo}
 //     </div>
 //   )
 // }
+import React from "react";
+import "./styles";
+import YoutubeEmbed from "./YoutubeEmbed";
 
+export default function Video({ yogaData }) {
+  return (
+    <div className="App">
+      <YoutubeEmbed embedId="rokGy0huYEA" />
+    </div>
+  );
+}
 
 // NOTE: add description of yoga pose here!

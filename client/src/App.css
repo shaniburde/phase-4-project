@@ -4,6 +4,14 @@
   text-align: center;
 }
 
+.tagline {
+  color: white;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 200;
+}
+
 /* header */
 .header {
   font-family: 'Cookie', cursive;

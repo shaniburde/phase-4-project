@@ -11,6 +11,7 @@ function Login({ onLogin }) {
   return (
     <Wrapper>
       <Logo>Calmer</Logo>
+      <h2 className="tagline">Our handpicked collection of yoga poses and videos will help you elevate your soul and reach your calmer state of being</h2>
       {showLogin ? (
         <>
           <LoginForm onLogin={onLogin} />

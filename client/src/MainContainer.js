@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import Video from './Video';
+import React, { useState } from 'react';
+// import Video from './Video';
 import YogaList from './YogaList';
 
 export default function MainContainer({ yogaData }) {
 
   const [clicked, setClicked] = useState(false);
-  const [yogaVideo, setYogaVideo] = useState("")
+  // const [yogaVideo, setYogaVideo] = useState("")
   
 
 
