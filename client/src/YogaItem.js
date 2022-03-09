@@ -34,7 +34,7 @@ export default function YogaItem({id, title, image, category, description, favor
         <h4>{category}</h4>
         <p>{description}</p>
       </div> 
-      <button onClick={handleClick}>{liked ? '❤' : '♡'}</button>
+      <button className="like-button" onClick={handleClick}>{liked ? '❤' : '♡'}</button>
     </div>
 
 

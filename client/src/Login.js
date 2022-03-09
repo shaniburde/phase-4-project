@@ -43,6 +43,7 @@ const Logo = styled.h1`
   text-shadow: 2px 2px #03045e;
   font-size: 100px;
   margin: 8px 0 16px;
+  text-align: center;
 `;
 
 const Wrapper = styled.section`

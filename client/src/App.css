@@ -33,6 +33,17 @@
   text-decoration: none;
 }
 
+.welcome{
+  font-family: 'Cookie', cursive;
+  color: #ffffff;
+  text-shadow: 1px 1px #03045e;
+  font-size: 30px;
+  text-align: left;
+  padding-top: 25px;
+  margin: 0 auto;
+  margin-left: 30px;
+}
+
 /* yoga list */
 
 .yoga-list{
@@ -76,6 +87,25 @@
 }
 .yoga-item:hover{
   box-shadow: 5px 5px #03045e;
+}
+
+.like-button{
+  border: none;
+  aspect-ratio: 1;
+  border-radius: 50%; 
+  display: grid; 
+  place-items: center;
+  height: 50%;
+  border-radius: 50%;
+  background-color: #ffffff;
+  text-align: center;
+  margin-bottom: 10%;
+  transition: .5s;
+}
+
+.like-button:hover{
+ background-color:#ff7eb2;
+ box-shadow: 0px 0px 2px #ffffff;
 }
 
 .next-button{

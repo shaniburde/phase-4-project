@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 const COLORS = {
   primary: {
-    "--main": "indigo",
+    "--main": "deepskyblue",
     "--accent": "white",
   },
   secondary: {
-    "--main": "lavenderblush",
-    "--accent": "indigo",
+    "--main": "white",
+    "--accent": "mediumblue",
   },
 };
 
@@ -26,7 +26,7 @@ const ButtonBase = styled.button`
   cursor: pointer;
   font-size: 1rem;
   border: 1px solid transparent;
-  border-radius: 6px;
+  border-radius: 20px;
   padding: 8px 16px;
   text-decoration: none;
 `;
