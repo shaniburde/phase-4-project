@@ -7,7 +7,6 @@ import MainContainer from './MainContainer';
 
 function App() {
 
-  const [yogaData, setYogaData] = useState([])
   const [user, setUser] = useState(null);
   
     useEffect(() => {
@@ -18,20 +17,13 @@ function App() {
       });
     }, []);
 
-  useEffect(() => {
-    fetch("http://localhost:4000/yoga_poses")
-      .then((r) => r.json())
-      .then((pose) => {setYogaData(pose)});
-  }, []);
-
-  function handleLogin(user) {
-    setUser(user);
-  }
+    console.log(user)
+  
 
   function handleLogout() {
     setUser(null);
   }
-   console.log(yogaData)
+
 
   if (!user) return <Login onLogin={setUser} />;
 
@@ -40,8 +32,7 @@ function App() {
     <div className="App">
       <Header user={user} setUser={setUser} onLogout={handleLogout} />
       <Routes>
-          {/* <Route exact path="/login" element={<Login onLogin={handleLogin} />}/> */}
-          <Route exact path="/yoga-poses" element={<MainContainer yogaData={yogaData} />}/>
+          <Route exact path="/yoga-poses" element={<MainContainer />}/>
         </Routes>
     </div>
     </>

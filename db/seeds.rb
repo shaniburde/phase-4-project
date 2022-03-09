@@ -6,16 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-puts "👩👨 Seeding users..."
+# puts "👩👨 Seeding users..."
 
-user1 = User.create(username: 'Jen', password: 'apple')
-user2 = User.create(username: 'Shani', password: 'banana')
-user3 = User.create(username: 'Gehrig', password: 'banana')
-user4 = User.create(username: 'Ethan', password: 'banana')
-user5 = User.create(username: 'Hain', password: 'banana')
-user6 = User.create(username: 'Ilolo', password: 'banana')
-user7 = User.create(username: 'Vivian', password: 'banana')
-user8 = User.create(username: 'Rodney', password: 'banana')
+# user1 = User.create(username: 'Jen', password: 'apple')
+# user2 = User.create(username: 'Shani', password: 'banana')
+# user3 = User.create(username: 'Gehrig', password: 'banana')
+# user4 = User.create(username: 'Ethan', password: 'banana')
+# user5 = User.create(username: 'Hain', password: 'banana')
+# user6 = User.create(username: 'Ilolo', password: 'banana')
+# user7 = User.create(username: 'Vivian', password: 'banana')
+# user8 = User.create(username: 'Rodney', password: 'banana')
 
 
 puts "🧘🤸 Seeding yoga poses..."

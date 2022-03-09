@@ -10,7 +10,7 @@ export default function LoginForm({ onLogin }) {
   function handleSubmit(e) {
     e.preventDefault();
     setIsLoading(true);
-    fetch("http://localhost:4000/users", {
+    fetch("/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
