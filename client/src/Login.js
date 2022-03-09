@@ -14,23 +14,22 @@ function Login({ onLogin }) {
       {showLogin ? (
         <>
           <LoginForm onLogin={onLogin} />
-          <p>
-            Don't have an account? &nbsp;
-            <Button color="secondary" onClick={() => setShowLogin(false)}>
+          <Divider />
+          <p className="accountquestion">
+            Don't have an account?</p> &nbsp;
+            <Button onClick={() => setShowLogin(false)}>
               Sign Up
-            </Button>
-          </p>
+            </Button> 
         </>
       ) : (
         <>
           <SignUpForm onLogin={onLogin} />
           <Divider />
-          <p>
-            Already have an account? &nbsp;
-            <Button color="secondary" onClick={() => setShowLogin(true)}>
+          <p className="accountquestion">
+            Already have an account?</p> &nbsp;
+            <Button onClick={() => setShowLogin(true)}>
               Log In
             </Button>
-          </p>
         </>
       )}
     </Wrapper>
@@ -39,8 +38,9 @@ function Login({ onLogin }) {
 
 const Logo = styled.h1`
   font-family: "Cookie", cursive;
-  color: #48cae4;
-  text-shadow: 2px 2px #03045e;
+  /* color: #48cae4; */
+  color: white;
+  text-shadow: 1px 1px 10px #03045e;
   font-size: 100px;
   margin: 8px 0 16px;
   text-align: center;
@@ -57,4 +57,5 @@ const Divider = styled.hr`
   border-bottom: 1px solid #ccc;
   margin: 16px 0;
 `;
+
 export default Login;

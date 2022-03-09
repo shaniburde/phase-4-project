@@ -7,7 +7,7 @@ const COLORS = {
   },
   secondary: {
     "--main": "white",
-    "--accent": "mediumblue",
+    "--accent": "lightblue",
   },
 };
 
@@ -28,12 +28,15 @@ const ButtonBase = styled.button`
   border: 1px solid transparent;
   border-radius: 20px;
   padding: 8px 16px;
+  margin-left: 40%;
+  margin-right: 40%;
+  margin-bottom: 10%;
   text-decoration: none;
 `;
 
 const FillButton = styled(ButtonBase)`
-  background-color: var(--main);
-  color: var(--accent);
+  background-color: white;
+  color: darkblue;
 
   &:hover {
     opacity: 0.9;
@@ -42,7 +45,7 @@ const FillButton = styled(ButtonBase)`
 
 const OutlineButton = styled(ButtonBase)`
   background-color: white;
-  color: var(--main);
+  color: darkblue;
   border: 2px solid var(--main);
 
   &:hover {

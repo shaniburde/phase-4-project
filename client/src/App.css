@@ -1,3 +1,9 @@
+/* main login page */
+.accountquestion {
+  color: white;
+  text-align: center;
+}
+
 /* header */
 .header {
   font-family: 'Cookie', cursive;
