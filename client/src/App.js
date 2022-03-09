@@ -26,8 +26,8 @@ function App() {
         .then((pose) => {setYogaData(pose)});
     }, []);
 
-    console.log(user)
-    console.log(yogaData)
+    // console.log(user)
+    // console.log(yogaData)
 
   function handleLogout() {
     setUser(null);
@@ -44,18 +44,13 @@ function App() {
     setYogaData(editedItems);
   }
 
-  function handleFindVideo(yogaObj){
-    const yogaVideo = yogaData.filter((obj) => {
-      if (obj.id === yogaObj.id) {
-        return obj.video
-      } else {
-        return null
-      }
-    });
+  function handleFindVideo(yogaVideo){
     setVideoData(yogaVideo);
   }
 
-  console.log(videoData)
+ const yogaVideoData = yogaData.map((obj) => obj.video)
+//  console.log(yogaVideoData[0]);
+  // console.log(videoData)
 
 
   if (!user) return <Login onLogin={setUser} />;

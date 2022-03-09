@@ -20,7 +20,8 @@ export default function MainContainer({ yogaData, handleUpdateItem, handleFindVi
 
   // const video = yogaData.map((data) => data.video)
   // console.log(video)
-  console.log(yogaData)
+  // console.log(yogaData)
+  console.log(videoData)
 
   return (
     <div>
@@ -29,7 +30,7 @@ export default function MainContainer({ yogaData, handleUpdateItem, handleFindVi
         yogaData={yogaData}
         clicked={clicked} 
         setClicked={setClicked}
-        yogaVideo={yogaVideo}
+        // yogaVideo={yogaVideo}
         videoData={videoData}
         />) 
         : 
