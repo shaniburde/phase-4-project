@@ -2,19 +2,13 @@ import React, { useState, useEffect } from 'react';
 import Video from './Video';
 import YogaList from './YogaList';
 
-export default function MainContainer() {
+export default function MainContainer({ yogaData }) {
 
   const [clicked, setClicked] = useState(false);
   const [yogaVideo, setYogaVideo] = useState("")
-  const [yogaData, setYogaData] = useState([])
+  
 
-  useEffect(() => {
-    fetch("http://localhost:4000/yoga_poses")
-      .then((r) => r.json())
-      .then((pose) => {setYogaData(pose)});
-  }, []);
 
-  console.log(yogaData)
   // function findVideo(clickedYogaCard){
   //   const yogaYoutubeVideo = yogaData.filter((video) => {
   //     if (video.id === clickedYogaCard) {
