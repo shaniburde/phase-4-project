@@ -5,7 +5,7 @@ class CreateYogaPoses < ActiveRecord::Migration[6.1]
       t.string :image
       t.string :category
       t.string :description
-      t.boolean :favorited
+      t.boolean :is_favorited, null: false, default: true
       t.string :video
 
       t.timestamps

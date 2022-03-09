@@ -21,10 +21,10 @@ import React from "react";
 import "./styles";
 import YoutubeEmbed from "./YoutubeEmbed";
 
-export default function Video({ yogaData }) {
+export default function Video({ videoData }) {
   return (
     <div className="App">
-      <YoutubeEmbed embedId="rokGy0huYEA" />
+      <YoutubeEmbed videoData={videoData} />
     </div>
   );
 }

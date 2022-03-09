@@ -1,40 +1,42 @@
 import React, {useState} from 'react';
-// import * as React from 'react';
-// import Card from '@mui/material/Card';
-// import CardContent from '@mui/material/CardContent';
-// import CardMedia from '@mui/material/CardMedia';
-// import Typography from '@mui/material/Typography';
-// import { CardActionArea } from '@mui/material';
 
-export default function YogaItem({id, title, image, category, description, favorited, clicked, setClicked, findVideo}) {
-  
+export default function YogaItem({ yogaPose, handleUpdateItem, clicked, setClicked, handleFindVideo }) {
 
-  const [liked, setLiked] = useState(false)
+  const { id, title, image, category, description, is_favorited: isFavorited } = yogaPose;
 
-  function handleClick(){
-    setLiked(!liked)
+
+
+  function handleClick(e) {
+    e.preventDefault();
+
+    fetch(`http://localhost:4000/yoga_poses/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ is_favorited: !isFavorited }),
+    })
+      .then((r) => r.json())
+      .then((updatedItem) => handleUpdateItem(updatedItem))
   }
-  function handleButtonClick(){
+  
+  function handleItemClick(){
     setClicked(!clicked)
-    findVideo(id)
+    handleFindVideo(yogaPose.video)
   }
   
-  
-  // function videoId(){
-  // const yogaVideoId = id
-  // }
 
   return (
     // <>
   
     <div className="yoga-item">
-      <div onClick={handleButtonClick}>
+      <div onClick={handleItemClick}>
         <h2>{title}</h2>
         <img src={image} className="yogaimage" alt="yoga pose"/>
         <h4>{category}</h4>
         <p>{description}</p>
       </div> 
-      <button className="like-button" onClick={handleClick}>{liked ? '❤' : '♡'}</button>
+      <button className="like-button" onClick={handleClick}>{isFavorited ? '❤' : '♡'}</button>
     </div>
 
 

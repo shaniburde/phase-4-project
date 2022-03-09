@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   # resources :sessions, only: [:create]
   resources :comments
-  resources :yoga_poses, only: [:index, :show]
+  resources :yoga_poses, only: [:index, :show, :update]
 
   post "/signup", to: "users#create"
   get "/me", to: "users#show"

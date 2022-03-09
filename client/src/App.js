@@ -10,6 +10,7 @@ function App() {
 
   const [user, setUser] = useState(null);
   const [yogaData, setYogaData] = useState([]);
+  const [videoData, setVideoData] = useState("")
   
     useEffect(() => {
       fetch("http://localhost:4000/me").then((response) => {
@@ -32,6 +33,30 @@ function App() {
     setUser(null);
   }
 
+  function handleUpdateItem(updatedItemObj) {
+    const editedItems = yogaData.map((item) => {
+      if (item.id === updatedItemObj.id) {
+        return updatedItemObj;
+      } else {
+        return item;
+      }
+    });
+    setYogaData(editedItems);
+  }
+
+  function handleFindVideo(yogaObj){
+    const yogaVideo = yogaData.filter((obj) => {
+      if (obj.id === yogaObj.id) {
+        return obj.video
+      } else {
+        return null
+      }
+    });
+    setVideoData(yogaVideo);
+  }
+
+  console.log(videoData)
+
 
   if (!user) return <Login onLogin={setUser} />;
 
@@ -40,8 +65,12 @@ function App() {
     <div className="App">
       <Header user={user} setUser={setUser} onLogout={handleLogout} />
       <Routes>
-          <Route exact path="/yoga-poses" element={<MainContainer yogaData={yogaData}/>}/>
-          <Route exact path="/videos" element={<Video yogaData={yogaData}/>}/>
+          <Route exact path="/" element={
+            <MainContainer yogaData={yogaData} handleUpdateItem={handleUpdateItem} videoData={videoData} handleFindVideo={handleFindVideo} />
+            }/>
+          <Route exact path="/videos" element={
+            <Video yogaData={yogaData} />
+            }/>
         </Routes>
     </div>
     </>
