@@ -20,8 +20,11 @@ export default function MainContainer({ yogaData, handleUpdateItem, handleFindVi
     .then(r => r.json())
     .then((comments) => setCommentData(comments));
   }, []);
-
-// console.log(commentData)
+//  console.log(commentData["comments"][0].description)
+  // const commentList = commentData["comments"]
+  // const commentDataList = commentList.map((comment) => {
+  //   return <p key={comment.id}>{comment.description}</p>;
+  // });
 
   return (
     <div>

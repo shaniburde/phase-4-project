@@ -1,5 +1,5 @@
 class YogaPoseWithCommentsSerializer < ActiveModel::Serializer
-  attributes :id, :title, :category, :description, :comments
+  attributes :id, :title, :category, :description
   has_many :comments
 
 end
