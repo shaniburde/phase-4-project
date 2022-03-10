@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
     end
 
     def create 
-        comment = @current_user.comments.create!(comment_params)
+        comment = Comment.create!(comment_params)
         render json: comment, status: :created
     end
 
@@ -34,6 +34,6 @@ class CommentsController < ApplicationController
     end
 
     def comment_params 
-        params.permit(:description)
+        params.permit(:description, :yoga_pose_id, :user_id)
     end
 end

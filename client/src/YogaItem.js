@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 
-export default function YogaItem({ yogaPose, handleUpdateItem, clicked, setClicked, handleFindVideo, handleFindId }) {
+export default function YogaItem({ yogaPose, handleUpdateItem, handleFindVideoData }) {
 
   const { id, title, image, category, description, is_favorited: isFavorited } = yogaPose;
 
@@ -22,8 +22,7 @@ export default function YogaItem({ yogaPose, handleUpdateItem, clicked, setClick
   }
   
   function handleItemClick(){
-    handleFindVideo(yogaPose.video)
-    handleFindId(id)
+    handleFindVideoData(yogaPose)
   }
   
 

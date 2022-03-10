@@ -2,52 +2,37 @@ import React, { useState, useEffect } from 'react';
 import Video from './Video';
 import YogaList from './YogaList';
 import { Route, Routes } from "react-router-dom"; 
+import CommentList from "./CommentList"
 
-export default function MainContainer({ yogaData, handleUpdateItem, handleFindVideo, videoData }) {
+export default function MainContainer({ yogaData, handleUpdateItem, handleFindVideoData, videoData, user }) {
 
   const [clicked, setClicked] = useState(false);
 
-  const [findId, setFindId] = useState("");
-
-  const [commentData, setCommentData] = useState([]);
-
-  function handleFindId(id){
-    setFindId(id)
-  }
-
-  useEffect(() => {
-    fetch(`http://localhost:4000/yoga_poses/${findId}`)
-    .then(r => r.json())
-    .then((comments) => setCommentData(comments));
-  }, []);
-//  console.log(commentData["comments"][0].description)
-  // const commentList = commentData["comments"]
-  // const commentDataList = commentList.map((comment) => {
-  //   return <p key={comment.id}>{comment.description}</p>;
-  // });
+  console.log(yogaData)
 
   return (
     <div>
        <Routes> 
-         <Route exact path="/video" element={
-            <Video 
+          <Route exact path="/video" element={
+              <Video 
+                clicked={clicked} 
+                setClicked={setClicked}
+                videoData={videoData}
+                yogaData={yogaData}
+                />} 
+              />
+          <Route exact path="/comments" element={
+              <CommentList user={user} />} 
+              />
+          <Route exact path="*" element={
+            <YogaList 
+              yogaData={yogaData} 
               clicked={clicked} 
               setClicked={setClicked}
-              videoData={videoData}
-              // findId={findId}
-              commentData={commentData}
+              handleUpdateItem={handleUpdateItem}
+              handleFindVideoData={handleFindVideoData}
               />} 
             />
-        <Route exact path="*" element={
-          <YogaList 
-            yogaData={yogaData} 
-            clicked={clicked} 
-            setClicked={setClicked}
-            handleUpdateItem={handleUpdateItem}
-            handleFindVideo={handleFindVideo}
-            handleFindId={handleFindId}
-            />} 
-          />
         </Routes>  
     </div>
   )

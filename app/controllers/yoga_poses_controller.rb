@@ -7,7 +7,7 @@ class YogaPosesController < ApplicationController
 
     def show
         yogapose = find_yoga_poses
-        render json: yogapose, include: [:comments], serializer: YogaPoseWithCommentsSerializer, status: :ok
+        render json: yogapose, status: :ok
     end
 
     def update 

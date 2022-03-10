@@ -10,7 +10,7 @@ function App() {
 
   const [user, setUser] = useState(null);
   const [yogaData, setYogaData] = useState([]);
-  const [videoData, setVideoData] = useState("");
+  const [videoData, setVideoData] = useState([]);
   
   
     useEffect(() => {
@@ -42,10 +42,10 @@ function App() {
     setYogaData(editedItems);
   }
 
-  function handleFindVideo(yogaVideo){
-    setVideoData(yogaVideo);
+  function handleFindVideoData(yogaVideoData){
+    setVideoData(yogaVideoData);
   }
- console.log(videoData)
+ 
 
   if (!user) return <Login onLogin={setUser} />;
 
@@ -59,7 +59,8 @@ function App() {
               yogaData={yogaData} 
               handleUpdateItem={handleUpdateItem} 
               videoData={videoData} 
-              handleFindVideo={handleFindVideo} 
+              handleFindVideoData={handleFindVideoData} 
+              user={user}
               />}/>    
         </Routes>
     </div>
