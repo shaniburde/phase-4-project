@@ -5,11 +5,13 @@ import Header from './Header';
 import Login from './Login';
 import MainContainer from './MainContainer';
 
+
 function App() {
 
   const [user, setUser] = useState(null);
   const [yogaData, setYogaData] = useState([]);
   const [videoData, setVideoData] = useState("");
+  
   
     useEffect(() => {
       fetch("http://localhost:4000/me").then((response) => {

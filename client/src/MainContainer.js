@@ -7,12 +7,21 @@ export default function MainContainer({ yogaData, handleUpdateItem, handleFindVi
 
   const [clicked, setClicked] = useState(false);
 
-  const [findId, setFindId] = useState("")
+  const [findId, setFindId] = useState("");
+
+  const [commentData, setCommentData] = useState([]);
 
   function handleFindId(id){
     setFindId(id)
   }
 
+  useEffect(() => {
+    fetch(`http://localhost:4000/yoga_poses/${findId}`)
+    .then(r => r.json())
+    .then((comments) => setCommentData(comments));
+  }, []);
+
+// console.log(commentData)
 
   return (
     <div>
@@ -22,7 +31,8 @@ export default function MainContainer({ yogaData, handleUpdateItem, handleFindVi
               clicked={clicked} 
               setClicked={setClicked}
               videoData={videoData}
-              findId={findId}
+              // findId={findId}
+              commentData={commentData}
               />} 
             />
         <Route exact path="*" element={

@@ -1,12 +1,12 @@
 import React from 'react'
 
-export default function CommentList({ commentDataList }) {
+export default function CommentList({ comments }) {
 
-    console.log(commentDataList)
+    console.log(comments)
     
     
 
   return (
-    <div>{commentDataList}</div>
+    <div>{comments}</div>
   )
 }
