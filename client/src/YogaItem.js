@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function YogaItem({ yogaPose, handleUpdateItem, handleFindVideoData }) {
@@ -24,6 +24,8 @@ export default function YogaItem({ yogaPose, handleUpdateItem, handleFindVideoDa
   function handleItemClick(){
     handleFindVideoData(yogaPose)
   }
+
+  const summary = description.substring(0, 50)
   
 
   return (
@@ -32,10 +34,9 @@ export default function YogaItem({ yogaPose, handleUpdateItem, handleFindVideoDa
         <h2>{title}</h2>
         <img src={image} className="yogaimage" alt="yoga pose"/>
         <h4>{category}</h4>
-        <p>{description}</p>
-      </div> 
-      <button className="like-button" onClick={handleClick}>{isFavorited ? '❤' : '♡'}</button>
-      <Link exact to="/video" onClick={handleItemClick} >See More</Link>
+        <p>{summary}...</p>
+      </div>
+      <Link exact to="/video" onClick={handleItemClick} ><i class="gg-play-button-o"></i></Link>
     </div>
   );
 }

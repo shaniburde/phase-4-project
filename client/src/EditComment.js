@@ -35,6 +35,7 @@ export default function EditComment({ id, comment, setIsEditing, handleUpdateCom
         <label className="form-label" htmlFor="edit-comment">
             Edit Comment:
         </label>
+        <br/>
         <input
             name="edit-comment"
             type="text" 
@@ -43,6 +44,7 @@ export default function EditComment({ id, comment, setIsEditing, handleUpdateCom
             onChange={handleDescriptionChange}
             className="edit-comment-input"
         />
+        <br/>
         <button className="save-button" type="submit" value="Save">Save</button>
     </form>
   )

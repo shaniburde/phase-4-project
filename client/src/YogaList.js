@@ -6,7 +6,7 @@ export default function YogaList({ yogaData, clicked, setClicked, handleUpdateIt
   const [dataIndex, setDataIndex] = useState(0)
 
   const yogaItems = [...yogaData]
-    .slice(dataIndex, dataIndex + 6)
+    .slice(dataIndex, dataIndex + 3)
 
     .map((yogaPose) => 
     <YogaItem 
@@ -21,17 +21,27 @@ export default function YogaList({ yogaData, clicked, setClicked, handleUpdateIt
   )
 
   function handleClickMore() {
-    setDataIndex((dataIndex) => (dataIndex + 6) % yogaData.length);
+    setDataIndex((dataIndex) => (dataIndex + 3) % yogaData.length);
+  }
+  function handleClickLess() {
+    setDataIndex((dataIndex) => (dataIndex - 3) % yogaData.length);
   }
   
   return (
     <div className="yoga-list">
       <div className="yoga-container">{yogaItems}</div>
-      <div className="next-container">
-          <button 
-            className="next-button" 
-            onClick={handleClickMore}>➤</button>
-      </div>
+      <div className="float-container">
+          <div className="next-container">
+                <button 
+                className="back-button" 
+                onClick={handleClickLess}><i class="gg-chevron-left"></i></button>
+          </div>
+          <div className="next-container">
+              <button 
+                className="next-button" 
+                onClick={handleClickMore}><i class="gg-chevron-right"></i></button>
+            </div>
+        </div>
     </div>
     
   )

@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import EditComment from './EditComment';
 import { Link } from 'react-router-dom';
-import { Route, Routes } from "react-router-dom"; 
-import ShowComment from './ShowComment';
 
 export default function CommentBubble({ id, comment, handleDeleteComment, handleUpdateComment, handleShowComment }) {
 
@@ -32,15 +30,17 @@ export default function CommentBubble({ id, comment, handleDeleteComment, handle
         />
        ) : (
          <div className="comment-container">
+           {/* <Link className="full-comment-button" to={`/comments/${id}`}>Full Comment</Link>  */}
+           <button className="delete-button" onClick={handleDelete}>X</button>
            <button className="edit-btn" onClick={() => setIsEditing((isEditing) => !isEditing)}>
               <span role="img" aria-label="edit">
                 ✏️
               </span>
             </button>
-           <h3 className="comment">{description}</h3>
-           <p className="username">{user.username}</p>
-           <button className="delete-button" onClick={handleDelete}>X</button>
-           <Link className="full-comment-button" to={`/comments/${id}`}>Full Comment</Link> 
+            <br/>
+           <h3 className="comment">{description} 
+           <p className="username">- {user.username}</p>
+           <Link className="full-comment-button" to={`/comments/${id}`}>Full Comment</Link></h3>
            </div>
        )
       }

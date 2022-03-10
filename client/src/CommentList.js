@@ -87,19 +87,34 @@ export default function CommentList({ user }) {
         setDataIndex((dataIndex) => (dataIndex + 6) % commentData.length);
       }
 
+    function handleClickLess() {
+      setDataIndex((dataIndex) => (dataIndex - 6) % commentData.length);
+    }
+
   return (
     <>
-    <div>{commentList}</div>
-    <button className="next-button" onClick={handleClickMore}>➤</button>
+    <div className="comments-div">{commentList}</div>
+    <div className="float-container">
+          <div className="next-container">
+                <button 
+                className="back-button" 
+                onClick={handleClickLess}><i class="gg-chevron-left"></i></button>
+          </div>
+          <div className="next-container">
+              <button 
+                className="next-button" 
+                onClick={handleClickMore}><i class="gg-chevron-right"></i></button>
+            </div>
+        </div>
     <form className="create-comment" onSubmit={handleSubmit} >
       <label className="form-label" htmlFor="attendees">New Comment: </label>
       <input 
+        className="comment-input"
         name="comment"
         type="text"
         placeholder="Enter a comment..."
         value={description}
         onChange={handleCommentChange}
-        className="comment-input"
         ></input>
         <input className="submit-button" type="submit" value="Post" />
     </form>

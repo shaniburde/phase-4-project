@@ -9,6 +9,7 @@ function Login({ onLogin }) {
   const [showLogin, setShowLogin] = useState(true);
   
   return (
+    <div className="login-form">
     <Wrapper>
       <Logo>Calmer</Logo>
       <h2 className="tagline">Our handpicked collection of yoga poses and videos will help you elevate your soul and reach your calmer state of being</h2>
@@ -34,12 +35,12 @@ function Login({ onLogin }) {
         </>
       )}
     </Wrapper>
+    </div>
   );
 }
 
 const Logo = styled.h1`
   font-family: "Cookie", cursive;
-  /* color: #48cae4; */
   color: white;
   text-shadow: 1px 1px 10px #03045e;
   font-size: 100px;

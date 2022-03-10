@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Video from './Video';
 import YogaList from './YogaList';
 import { Route, Routes } from "react-router-dom"; 
