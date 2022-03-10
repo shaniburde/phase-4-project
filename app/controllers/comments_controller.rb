@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
 
     def update 
         comment = find_comment
-        @current_user.comments.update!(comment_params)
+        comment.update!(comment_params)
         render json: comment, status: :ok
     end
 

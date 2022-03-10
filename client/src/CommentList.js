@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import CommentBubble from './CommentBubble';
 
+
 export default function CommentList({ user }) {
 
     const [commentData, setCommentData] = useState([])
@@ -19,14 +20,6 @@ export default function CommentList({ user }) {
         setCommentData((prevState) => [...prevState, newComment])
       }
 
-    function handleDelete(id){
-        fetch(`/comments/${id}`, { 
-          method: 'DELETE',
-        })
-        .then((r) => r.json())
-        .then((deletedComment) => handleDeleteComment(deletedComment))
-      }
-
       function handleDeleteComment(commentToDelete){
         const updatedComments = commentData.filter((comment) => {
           if (comment.id !== commentToDelete.id) {
@@ -36,7 +29,17 @@ export default function CommentList({ user }) {
           }
         });
         setCommentData(updatedComments);
-        console.log(updatedComments)
+      }
+
+      function handleUpdateComment(updatedCommentObj) {
+        const editedComments = commentData.map((comment) => {
+          if (comment.id === updatedCommentObj.id) {
+            return updatedCommentObj;
+          } else {
+            return comment;
+          }
+        });
+        setCommentData(editedComments);
       }
 
     function handleSubmit(e){
@@ -56,22 +59,23 @@ export default function CommentList({ user }) {
               setDescription("");     
               console.log(newCommentObj); 
       }
-    
-        const commentList = commentData
-        .slice(dataIndex, dataIndex + 6)
-        .map((commentData) => {
-            <CommentBubble />
-            // return <div key={id}>
-            //     <div onClick={console.log(id)}className="comment-container">
-            //         <h3 className="comment">{description}</h3>
-            //         <p className="username">{user.username}</p>
-            //         <button className="delete-button" onClick={handleDelete(id)}>X</button>
-            //     </div>
-            // </div>
-        }) 
 
-    function handleCommentChange(e){
-        setDescription(e.target.value)
+      console.log(commentData)
+    
+      const commentList = [...commentData]
+      // .slice(dataIndex, dataIndex + 6)
+      .map((comment) => 
+            <CommentBubble 
+              key={comment.id} 
+              id={comment.id}
+              comment={comment} 
+              handleDeleteComment={handleDeleteComment} 
+              handleUpdateComment={handleUpdateComment}
+            />
+        ) 
+
+    function handleCommentChange(e){   
+    setDescription(e.target.value)
     }
 
     function handleClickMore() {
@@ -82,7 +86,7 @@ export default function CommentList({ user }) {
     <>
     <div>{commentList}</div>
     <button className="next-button" onClick={handleClickMore}>➤</button>
-    <form className="edit-event" onSubmit={handleSubmit} >
+    <form className="create-comment" onSubmit={handleSubmit} >
       <label className="form-label" htmlFor="attendees">New Comment: </label>
       <input 
         name="comment"
