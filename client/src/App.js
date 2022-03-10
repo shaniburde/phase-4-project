@@ -4,13 +4,12 @@ import { Route, Routes } from "react-router-dom";
 import Header from './Header';
 import Login from './Login';
 import MainContainer from './MainContainer';
-import Video from './Video';
 
 function App() {
 
   const [user, setUser] = useState(null);
   const [yogaData, setYogaData] = useState([]);
-  const [videoData, setVideoData] = useState("")
+  const [videoData, setVideoData] = useState("");
   
     useEffect(() => {
       fetch("http://localhost:4000/me").then((response) => {
@@ -25,9 +24,6 @@ function App() {
         .then((r) => r.json())
         .then((pose) => {setYogaData(pose)});
     }, []);
-
-    // console.log(user)
-    // console.log(yogaData)
 
   function handleLogout() {
     setUser(null);
@@ -47,11 +43,7 @@ function App() {
   function handleFindVideo(yogaVideo){
     setVideoData(yogaVideo);
   }
-
- const yogaVideoData = yogaData.map((obj) => obj.video)
-//  console.log(yogaVideoData[0]);
-  // console.log(videoData)
-
+ console.log(videoData)
 
   if (!user) return <Login onLogin={setUser} />;
 
@@ -60,12 +52,13 @@ function App() {
     <div className="App">
       <Header user={user} setUser={setUser} onLogout={handleLogout} />
       <Routes>
-          <Route exact path="/" element={
-            <MainContainer yogaData={yogaData} handleUpdateItem={handleUpdateItem} videoData={videoData} handleFindVideo={handleFindVideo} />
-            }/>
-          <Route exact path="/videos" element={
-            <Video yogaData={yogaData} />
-            }/>
+          <Route exact path="*" element={
+            <MainContainer 
+              yogaData={yogaData} 
+              handleUpdateItem={handleUpdateItem} 
+              videoData={videoData} 
+              handleFindVideo={handleFindVideo} 
+              />}/>    
         </Routes>
     </div>
     </>

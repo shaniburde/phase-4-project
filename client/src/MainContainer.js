@@ -1,48 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Video from './Video';
 import YogaList from './YogaList';
+import { Route, Routes } from "react-router-dom"; 
 
 export default function MainContainer({ yogaData, handleUpdateItem, handleFindVideo, videoData }) {
 
   const [clicked, setClicked] = useState(false);
-  const [yogaVideo, setYogaVideo] = useState("")
-  
 
+  const [findId, setFindId] = useState("")
 
-  // function findVideo(clickedYogaCard){
-  //   const yogaYoutubeVideo = yogaData.filter((video) => {
-  //     if (video.id === clickedYogaCard) {
-  //       return video
-  //     }
-  //   })
-  //   setYogaVideo(yogaYoutubeVideo.video)
-  // };
+  function handleFindId(id){
+    setFindId(id)
+  }
 
-  // const video = yogaData.map((data) => data.video)
-  // console.log(video)
-  // console.log(yogaData)
-  console.log(videoData)
 
   return (
     <div>
-      {clicked ? 
-       (<Video 
-        yogaData={yogaData}
-        clicked={clicked} 
-        setClicked={setClicked}
-        // yogaVideo={yogaVideo}
-        videoData={videoData}
-        />) 
-        : 
-      (<YogaList 
-        yogaData={yogaData} 
-        clicked={clicked} 
-        setClicked={setClicked}
-        handleUpdateItem={handleUpdateItem}
-        handleFindVideo={handleFindVideo}
-        // findVideo={findVideo}
-        />)
-      }
+       <Routes> 
+         <Route exact path="/video" element={
+            <Video 
+              clicked={clicked} 
+              setClicked={setClicked}
+              videoData={videoData}
+              findId={findId}
+              />} 
+            />
+        <Route exact path="*" element={
+          <YogaList 
+            yogaData={yogaData} 
+            clicked={clicked} 
+            setClicked={setClicked}
+            handleUpdateItem={handleUpdateItem}
+            handleFindVideo={handleFindVideo}
+            handleFindId={handleFindId}
+            />} 
+          />
+        </Routes>  
     </div>
   )
 }

@@ -140,7 +140,7 @@
 }
 
 
-/* youtube videos */
+/* video page */
 
 .video-responsive {
   overflow: hidden;
@@ -157,3 +157,18 @@
   position: absolute;
 }
 
+.video-container {
+
+}
+
+.video-title {
+
+}
+
+.video-category {
+
+}
+
+.video-description {
+
+}

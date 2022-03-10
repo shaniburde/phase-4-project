@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import YogaItem from './YogaItem';
 
-export default function YogaList({ yogaData, clicked, setClicked, handleUpdateItem, handleFindVideo }) {
+export default function YogaList({ yogaData, clicked, setClicked, handleUpdateItem, handleFindVideo, handleFindId }) {
 
   const [dataIndex, setDataIndex] = useState(0)
 
@@ -16,6 +16,7 @@ export default function YogaList({ yogaData, clicked, setClicked, handleUpdateIt
       clicked={clicked}
       setClicked={setClicked}
       handleFindVideo={handleFindVideo}
+      handleFindId={handleFindId}
     />
   )
 
