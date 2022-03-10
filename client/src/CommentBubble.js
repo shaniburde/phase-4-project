@@ -1,11 +1,15 @@
 import React, {useState} from 'react';
 import EditComment from './EditComment';
 import { Link } from 'react-router-dom';
+import { Route, Routes } from "react-router-dom"; 
+import ShowComment from './ShowComment';
 
-export default function CommentBubble({ id, comment, handleDeleteComment, handleUpdateComment }) {
+export default function CommentBubble({ id, comment, handleDeleteComment, handleUpdateComment, handleShowComment }) {
+
   const [isEditing, setIsEditing] = useState(false);
   const { description, user } = comment
   
+
 
   function handleDelete(){
     fetch(`/comments/${id}`, { 

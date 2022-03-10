@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import CommentBubble from './CommentBubble';
 
 
+
 export default function CommentList({ user }) {
 
     const [commentData, setCommentData] = useState([])
     const [description, setDescription] = useState("")
     const [dataIndex, setDataIndex] = useState(0)
+    const [showComment, setShowComment] = useState("")
  
     
     
@@ -60,10 +62,12 @@ export default function CommentList({ user }) {
               console.log(newCommentObj); 
       }
 
-      console.log(commentData)
+      function handleShowComment(singleComment){
+        setShowComment(singleComment)
+      }
     
       const commentList = [...commentData]
-      // .slice(dataIndex, dataIndex + 6)
+      .slice(dataIndex, dataIndex + 6)
       .map((comment) => 
             <CommentBubble 
               key={comment.id} 
@@ -71,6 +75,7 @@ export default function CommentList({ user }) {
               comment={comment} 
               handleDeleteComment={handleDeleteComment} 
               handleUpdateComment={handleUpdateComment}
+              handleShowComment={handleShowComment}
             />
         ) 
 
