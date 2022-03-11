@@ -28,6 +28,13 @@ export default function YogaList({ yogaData, clicked, setClicked, handleUpdateIt
   }
   
   return (
+    <>
+    <div className="comment-page-title">
+      <p>Learn. Transform. Breathe.</p>
+    </div>
+    <div className="comment-page-intro">
+      <p>Our deepest passion is to help yogis grow their yoga practice.<br/>Explore strengthening and stretching poses with instructional videos to help guide you on your journey.</p>
+    </div>
     <div className="yoga-list">
       <div className="yoga-container">{yogaItems}</div>
       <div className="float-container">
@@ -43,6 +50,6 @@ export default function YogaList({ yogaData, clicked, setClicked, handleUpdateIt
             </div>
         </div>
     </div>
-    
+   </> 
   )
 }
