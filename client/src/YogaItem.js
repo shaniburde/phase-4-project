@@ -31,10 +31,10 @@ export default function YogaItem({ yogaPose, handleUpdateItem, handleFindVideoDa
   return (
     <div className="yoga-item">
       <div>
-        <h2>{title}</h2>
+        <h2 className="yoga-card-title">{title}</h2>
         <img src={image} className="yogaimage" alt="yoga pose"/>
-        <h4>{category}</h4>
-        <p>{summary}...</p>
+        <h4 className="yoga-card-category">{category}</h4>
+        <p className="yoga-card-description">{summary}...</p>
       </div>
       <Link exact to="/video" onClick={handleItemClick} ><i class="gg-play-button-o"></i></Link>
     </div>

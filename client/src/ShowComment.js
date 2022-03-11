@@ -19,6 +19,6 @@ export default function ShowComment() {
     console.log(currentComment)
 
   return (
-    <div>{currentComment.description}</div>
+    <div className="show-comment">{currentComment.description}</div>
   )
 }

@@ -67,7 +67,7 @@ export default function CommentList({ user }) {
       }
     
       const commentList = [...commentData]
-      .slice(dataIndex, dataIndex + 6)
+      .slice(dataIndex, dataIndex + 3)
       .map((comment) => 
             <CommentBubble 
               key={comment.id} 
@@ -84,11 +84,11 @@ export default function CommentList({ user }) {
     }
 
     function handleClickMore() {
-        setDataIndex((dataIndex) => (dataIndex + 6) % commentData.length);
+        setDataIndex((dataIndex) => (dataIndex + 3) % commentData.length);
       }
 
     function handleClickLess() {
-      setDataIndex((dataIndex) => (dataIndex - 6) % commentData.length);
+      setDataIndex((dataIndex) => (dataIndex - 3) % commentData.length);
     }
 
   return (
@@ -107,7 +107,7 @@ export default function CommentList({ user }) {
             </div>
         </div>
     <form className="create-comment" onSubmit={handleSubmit} >
-      <label className="form-label" htmlFor="attendees">New Comment: </label>
+      <label className="comment-label" htmlFor="comment">New Comment: </label>
       <input 
         className="comment-input"
         name="comment"
