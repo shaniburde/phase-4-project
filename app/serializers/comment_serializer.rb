@@ -5,3 +5,6 @@ class CommentSerializer < ActiveModel::Serializer
   has_one :yoga_pose
 
 end
+
+
+

@@ -417,7 +417,7 @@
   color: #03045e;
   text-shadow: 1px 1px 0px white;
   border-radius: 15px;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
 }
 
@@ -428,8 +428,18 @@
 
 
 .full-comment-button {
-  background-color: 
-}.comments-div {
+  background-color: #edfafd;
+  padding: 10px;
+  border-radius: 15px;
+  text-decoration: none;
+  color:#03045e;
+  font-size: 15px;
+}
+
+.full-comment-button:hover{
+  text-shadow: 0px 0px 5px #00b4d8;
+}
+.comments-div {
   margin-bottom: 0 auto;
   margin-top: 150px;
   margin-right: 20%;
