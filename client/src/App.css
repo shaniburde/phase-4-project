@@ -175,11 +175,11 @@
     font-family: 'Cookie', cursive;
     color: #ffffff;
     text-shadow: 1px 1px #03045e;
-    font-size: 30px;
+    font-size: 40px;
     text-align: left;
-    padding-top: 25px;
+    padding-top: 10px;
     margin: 0 auto;
-    margin-left: 30px;
+    margin-left: 50px;
   }
   
   /* yoga list */
@@ -194,7 +194,6 @@
   color: #03045E;
 }
   
-
   .yoga-card-category {
     color: #03045E;
   }
@@ -411,8 +410,23 @@
 }
 
 /* comment page */
+.comment-page-title {
+  padding-top: 150px;
+  text-align: center;
+  font-size: 35px;
+  color: #03045e;
+}
 
-.comment{
+.comment-page-intro {
+  padding-top: 10px;
+  margin-left: 22%;
+  margin-right: 22%;
+  text-align: center;
+  font-size: 17px;
+  color: #03045e;
+}
+
+.comment {
   background-color: rgb(194, 243, 255);
   color: #03045e;
   text-shadow: 1px 1px 0px white;
@@ -422,10 +436,8 @@
 }
 
 .bubble {
- margin: 5%;
+ margin: 3%;
 }
-
-
 
 .full-comment-button {
   background-color: #edfafd;
@@ -441,7 +453,7 @@
 }
 .comments-div {
   margin-bottom: 0 auto;
-  margin-top: 150px;
+  margin-top: 50px;
   margin-right: 20%;
   margin-left: 20%;
 }

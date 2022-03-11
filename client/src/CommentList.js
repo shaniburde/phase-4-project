@@ -93,6 +93,12 @@ export default function CommentList({ user }) {
 
   return (
     <>
+    <div className="comment-page-title">
+      <p>Namaste</p>
+    </div>
+    <div className="comment-page-intro">
+      <p>Join others in sharing your experiences with your yoga practice on this platform.<br/>Whether yoga is something you have never tried before, or an important habit in your everyday life,<br/> take a moment to breathe and find your center with other yogis.</p>
+    </div>
     <div className="comments-div">{commentList}</div>
     <div className="float-container">
           <div className="next-container">
